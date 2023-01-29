@@ -1,4 +1,5 @@
-﻿using OPPSConcept.Inheritance;
+﻿using OPPSConcept.Abstraction;
+using OPPSConcept.Inheritance;
 using OPPSConcept.Polymorphism;
 using System;
 namespace OPPSConcept
@@ -9,7 +10,7 @@ namespace OPPSConcept
         {
             Console.WriteLine("Welcome to OPPS Concept");
             Console.WriteLine("Plese Choose a Number to Perform a Program: ");
-            Console.WriteLine("1:Inheritance\n2:Polymorphism");
+            Console.WriteLine("1:Inheritance\n2:Polymorphism\n3:Abstraction");
             int Options = Convert.ToInt32(Console.ReadLine());
             switch(Options)
             {
@@ -26,6 +27,13 @@ namespace OPPSConcept
                     loadChild.Show();
                     loadChild.Show(10);
                     loadChild.Test();
+                    break;
+                case 3:
+                    AbsChild absChild = new AbsChild();
+                    absChild.Sub(10, 20);
+                    absChild.Add(20, 30);
+                    absChild.Div(20, 10);
+                    absChild.Mul(20, 20);
                     break;
             }
         }
