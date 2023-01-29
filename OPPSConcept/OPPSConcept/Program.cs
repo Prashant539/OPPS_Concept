@@ -1,4 +1,5 @@
 ﻿using OPPSConcept.Abstraction;
+using OPPSConcept.Encapsulation;
 using OPPSConcept.Inheritance;
 using OPPSConcept.Polymorphism;
 using System;
@@ -10,7 +11,7 @@ namespace OPPSConcept
         {
             Console.WriteLine("Welcome to OPPS Concept");
             Console.WriteLine("Plese Choose a Number to Perform a Program: ");
-            Console.WriteLine("1:Inheritance\n2:Polymorphism\n3:Abstraction");
+            Console.WriteLine("1:Inheritance\n2:Polymorphism\n3:Abstraction\n4:Encapsulation");
             int Options = Convert.ToInt32(Console.ReadLine());
             switch(Options)
             {
@@ -34,6 +35,17 @@ namespace OPPSConcept
                     absChild.Add(20, 30);
                     absChild.Div(20, 10);
                     absChild.Mul(20, 20);
+                    break;
+                case 4:
+                    Person person = new Person();
+                    Console.WriteLine("Plese enter the name: ");
+                    string Name = Console.ReadLine();
+                    Console.WriteLine("Plese enter the age: ");
+                    int Age = Convert.ToInt32(Console.ReadLine());
+                    person.setName(Name);
+                    person.getName(Name);
+                    person.setAge(Age);
+                    person.getAge(Age);
                     break;
             }
         }
